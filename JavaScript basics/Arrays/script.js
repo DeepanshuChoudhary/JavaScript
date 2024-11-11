@@ -95,29 +95,36 @@ console.log(num); // Prints the current state of `num`
 console.log(findIndexValue); // Prints the index of the first occurrence of 25
 
 
-// array find last index, if number is repeat in the array
+// Using findLastIndex to locate the last occurrence of a specific value in the array
+// `findLastIndex` is useful when a value repeats and you want the index of its last position.
 
-let num3 = [10,20,35,40,10,25,60];
+let num3 = [10, 20, 35, 40, 10, 25, 60];
 
-let findLastIndexValue = num3.findLastIndex ((val) => {
-    return val == 10;
-})
-
-console.log(findLastIndexValue);
-
-
-// num.split
-
-let num4 = '10,20,30'
-
-let arr = num4.split(',');
-    arr.forEach(val => {
-        console.log(val);
+let findLastIndexValue = num3.findLastIndex((val) => {
+    return val == 10; // Finds the index of the last occurrence of 10 in `num3`
 });
 
-console.log(arr);
+console.log(findLastIndexValue); // Prints the index of the last "10" in `num3`, which is 4
 
-// after split join array
+
+// Using split to convert a string into an array of substrings
+// split(',') separates the string at each comma, making each number a separate element in the array.
+
+let num4 = '10,20,30';
+
+let arr = num4.split(','); // Splits `num4` by commas, resulting in ["10", "20", "30"]
+
+// Using forEach to loop through and print each element of the array
+arr.forEach(val => {
+    console.log(val); // Prints each individual number as a separate element
+});
+
+console.log(arr); // Prints the full array created by split: ["10", "20", "30"]
+
+
+// Using join to combine array elements into a single string
+// join(" and ") combines array elements into one string, separated by " and ".
 
 let joinArr = arr.join(" and ");
-console.log(joinArr);
+console.log(joinArr); // Prints "10 and 20 and 30" as a single string
+
