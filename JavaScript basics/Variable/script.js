@@ -10,4 +10,4 @@ console.log(a);
 
 var name = "Nishant Nagar";
 var name = "Aakash Kasana";
-console.log(name);
+console.log(name); 
