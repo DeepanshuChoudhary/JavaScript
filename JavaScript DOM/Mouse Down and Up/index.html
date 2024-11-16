@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Down & Ups</title>
+    <style>
+        #myDiv{
+            width: 100px;
+            height: 100px;
+            background-color: aquamarine;
+            border: 2px solid black;
+            border-radius: 10px;
+
+            transition: background-color 1s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="myDiv"></div>
+    <br>
+    <button onmousedown="changeColorDown()" onmouseup="changeColorUp()">Change Color</button>
+
+    <script>
+
+        function changeColorDown() {
+            let div = document.getElementById("myDiv");
+            div.style.backgroundColor = "red";
+        }
+
+        function changeColorUp() {
+            let div = document.getElementById("myDiv");
+            // div.style.backgroundColor = "purple";
+            div.style.backgroundColor = "aquamarine";
+        }
+
+    </script>
+
+</body>
+</html>
