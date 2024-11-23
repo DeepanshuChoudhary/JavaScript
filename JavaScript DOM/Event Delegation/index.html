@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Delegation</title>
+</head>
+<style>
+
+    body{
+        padding: 20px;
+        background-color: #CC527A;
+    }
+
+    div{
+        padding: 20px;
+        /* border: 2px solid black; */
+        width: max-content;
+        background-color: #E8175D;
+        border-radius: 10px;
+    }
+
+    span{
+        padding: 20px;
+        background-color: #474747;
+        display: block;
+        border-radius: 10px;
+    }
+
+    button{
+        border-radius: 3px;
+        border: none;
+        transition: 0.3s ease;
+    }
+
+    button:hover{
+        transform: scale(0.95
+        );
+    }
+
+</style>
+<body>
+    
+    <div>
+        <span>
+            <button>
+                Click me!
+            </button>
+        </span>
+    </div>
+
+    <script>
+
+        const div = document.getElementsByTagName('div')[0];
+
+        div.addEventListener('click', (event) => {
+            if(event.target.tagName == 'BUTTON') {
+                console.log("BUTTON was clicked");
+            }
+            else if(event.target.tagName == 'SPAN') {
+                console.log("SPAN was clicked");
+            }
+            else{
+                console.log("DIV was clicked");
+            }
+        })
+    </script>
+
+</body>
+</html>
