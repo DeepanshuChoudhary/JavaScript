@@ -7,9 +7,10 @@
 </head>
 <body>
     
-    <form>
+    <form onsubmit="funSubmit()">
         Your Email Please:
-        <input type="email" id="input" onfocus="onfun()" onblur="offFun()">
+        <input type="email" id="input" onfocus="onfun()" onblur="offFun()" required>
+        <input type="submit">
     </form>
 
     <script>
@@ -21,6 +22,11 @@
 
         function offFun() {
             input.style.backgroundColor = "lightyellow";
+        }
+
+        function funSubmit() {
+            // alert("You submitted")
+            alert(`You submitted ${input.value}`);
         }
     </script>
 
