@@ -1,15 +1,16 @@
 "use strict";
 
-let enterPrompt = require("prompt-sync")();
-let value = Number(enterPrompt("Enter the value: "));
+let input = require("prompt-sync")();
+let n = Number(input("Enter: "));
 
-for(let i=1;i<=value;i++) {
-    let spaceDiff = value-i;
-    for(let space=0;space<spaceDiff;space++) {
-        process.stdout.write(" ");
-    }
-    for(let j=0;j<i;j++) {
-        process.stdout.write("*");
+for(let i=1;i<=n;i++) {
+    for(let j=1;j<=2*n-1;j++) {
+        if(i==j || i+j==2*n) {
+            process.stdout.write("* ");
+        }
+        else {
+            process.stdout.write("  ");
+        }
     }
     console.log();
 }
@@ -17,12 +18,25 @@ for(let i=1;i<=value;i++) {
 
 // "use strict";
 
-// let enterPrompt = require('prompt-sync')();
-// let value = Number(enterPrompt("Enter the Value:- "))
+// let input = require("prompt-sync")();
+// let n = Number(input("Enter: "));
 
-// for(let i=value;i>0;i--) {
-//     for(let j=0;j<i;j++) {
-//         process.stdout.write("*");
+// for(let i=1;i<=n;i++) {
+//     for(let space=1;space<=n;space++) {
+//         if(space==i) {
+//             process.stdout.write("*");
+//         }
+//         else {
+//             process.stdout.write(" ");
+//         }
 //     }
-//     console.log("");
+//     for(let j=1;j<=n-i;j++) {
+//         if(j==n-i) {
+//             process.stdout.write("*");
+//         }
+//         else {
+//             process.stdout.write(" ");
+//         }
+//     }
+//     console.log();
 // }
